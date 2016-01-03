@@ -20,7 +20,7 @@ import UIKit
         setupGradient()
     }
     
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -40,10 +40,10 @@ import UIKit
         let locations: [CGFloat] = [ 0.0, 0.15, 0.55, 0.75, 1 ]
         
         let colors = [
-            UIColor(white: 0, alpha: 0.7).CGColor!,
-            UIColor(white: 0, alpha: 0.5).CGColor!,
-            UIColor(white: 0, alpha: 0.1).CGColor!,
-            UIColor(white: 0, alpha: 0).CGColor!]
+            UIColor(white: 0, alpha: 0.7).CGColor,
+            UIColor(white: 0, alpha: 0.5).CGColor,
+            UIColor(white: 0, alpha: 0.1).CGColor,
+            UIColor(white: 0, alpha: 0).CGColor]
         
         gradientLayer.colors = colors
         gradientLayer.locations = locations
